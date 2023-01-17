@@ -1,5 +1,7 @@
 package com.example.contactlist.domain
 
+import androidx.lifecycle.LiveData
+
 interface ContactListRepository {
     fun addContactItem(contactItem: ContactItem)
 
@@ -9,7 +11,7 @@ interface ContactListRepository {
 
     fun getContactItem(contactItemId: Int): ContactItem
 
-    fun getContactList(): List<ContactItem>
+    fun getContactList(): LiveData<List<ContactItem>>
 
 
 }
